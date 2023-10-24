@@ -1,8 +1,7 @@
-package JavaBasicConcepts.JavaAdvancedConcepts;
+package JavaAdvancedConcepts;
 
-public class Fundamentals11 {
-    public static void main(String args[]) 
-    throws ClassNotFoundException 
+public class Fundamentals10 {
+    public static void main(String args[]) throws ClassNotFoundException 
     {
 
         // Every time class loads and objects are instantiated
@@ -30,7 +29,7 @@ class MobileCons
     int price;
     static String name;
 
-    //Constructor : To instatiate the instant variables.
+    //Constructor : To instantiate the instant variables.
     //Constructor name same as class name.
 
     public MobileCons()

@@ -1,4 +1,4 @@
-package JavaBasicConcepts.JavaAdvancedConcepts;
+package JavaAdvancedConcepts;
 
 public class Fundamentals7 {
     public static void main(String[] args) 

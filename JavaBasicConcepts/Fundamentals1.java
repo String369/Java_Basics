@@ -1,138 +1,107 @@
 package JavaBasicConcepts;
 
 public class Fundamentals1 {
-        public static void main(String a[])
-    
+
+    public static void main(String a[])
+
     {
-        int num13 = 7;
-        int num14 = 5;
-        int num15 = 5;
-        int num16 = 9;
+        System.out.println("Hello World");
+        System.out.println(3+5);
+        
+        //Variables 
+        int num1 = 5;
+        int num2 = 8;
+        System.out.println(num1 + num2);
+        int result = num1+num2;
+        System.out.println(result);
 
-        //Logical Operators
+        //Data Types : Primitive 
+        byte by = 127;
+        short sh = 558;
+        int num3 = 9;
+        long l = 5678l;
 
-        boolean result5 = num13>num14 && num15<num16;
-        // boolean result5 = num13>num14 || num15<num16;
-        System.out.println(result5);
-        System.out.println(!result5);
+        float f = 6.55f;
+        double d = 6.55;
+
+        char c = 'k';
+
+        boolean b = true; 
+
+        System.out.println("Data Types are : " + by + sh + num3 + l + f + d + c + b);
+
+        //Literals : Binary and Hexadecimal literals
+        int num4 = 0b101;
+        int num5 = 0x7E;
+        int num6 = 10_00_00_00_00;
+        double num7 = 12e10;
+        
+        System.out.println(num4);
+        System.out.println(num5);
+        System.out.println(num6);
+        System.out.println(num7);
+
+        char c1 = 'a';
+        c1++;
+        System.out.println(c1);
+
+        //Type conversion and Casting
+        byte b1 = 127;
+        int num8 = b1; //Implicit conversion 
+        System.out.println(num8);
+
+        //You cannot assign integer to byte
+        int num9 = 257;
+        // byte b3 = num9; Incompatible type : where Typencasting involves
+        byte b2 = (byte)num9;
+        System.out.println(b2);
+
+        float f1 = 5.6f;
+        int num10 = (int)f1; //Explicit conversion : CASTING
+        System.out.println(num10);
+
+        //Type Promotions
+        byte b3  = 10;
+        byte b4 = 20;
+        int result1 = b3*b4;
+        System.out.println(result1);
+
+        //Assigning Operators
+        int num11 = 7;
+        
+        //Increment
+        // num11 = num11+2;
+        // num11 += 2;
+        // num11++; //Post increment : First fetch the value and increment
+        // ++num11; //Pre increment  : First increment the value and after it will fetch the value
+
+        // int result2 = ++num11;
+        int result2 = num11++;
+        System.out.println("Post increment : " + result2);
 
 
-        //Conditional Statements
-        if(num16<10)
-        System.out.println("Condition executed : " + "Hello");
+        //Decrement
+        num11 -= 2;
+        num11--;
 
-        if(num16>10 && num16<=20)
-        System.out.println("Condition executed1 : " + "Hello1");
-        else
-        System.out.println("Condition executed1 : " + "Bye1");
+        int num12 = 5;
 
-        if(num15>num16)
-        System.out.println("Condition executed2 : " + "Hello2");
-        else
-        System.out.println("Condition executed2 : " + "Bye2");
+        // int result3 = num11+num12;
+        // int result3 = num11-num12;
+        // int result3 = num11*num12;
+        int result3  = num11%num12;
 
-        if(num14>num15 && num14>num16)
-        System.out.println("Condition executed3 : " + "num14");
-        else if(num15>num14 && num15>num16)
-        System.out.println("Condition executed3 : " + "num15");
-        else 
-        System.out.println("Condition executed3 : " + "num16");
+        System.out.println(result3);
 
-        //Terinary Operator
-        int result6 = 0;
+        //Comparators
+        // boolean result4 = num11<num12; // 7<5
+        // boolean result4 = num11>num12;
+        // boolean result4 = num11<=num12;
+        boolean result4 = num11>=num12;
 
-        // if(num16%3==0) 
-        // result6 = 10;
-        // else
-        // result6 =20;
-
-        result6 = num16%3 == 0? 10:20; 
-        System.out.println("Condition executed4 : " + result6);
-
-        //Switch Statement
-        int n = 1;
-
-        switch(n){
-            case 1:
-            System.out.println("Switch statement1 : " + "Monday");
-            break;
-            case 2:
-            System.out.println("Switch statement2 : " + "Tuesday");
-            break;
-            case 3:
-            System.out.println("Switch statement3 : " + "Wednesday");
-            break;
-            case 4:
-            System.out.println("Switch statement4 : " + "Thursday");
-            break;
-            case 5:
-            System.out.println("Switch statement5 : " + "Friday");
-            break;
-            case 6:
-            System.out.println("Switch statement6 : " + "Saturday");
-            break;
-            case 7:
-            System.out.println("Switch statement7 : " + "Sunday");
-            break;
-            default:
-            System.out.println("Switch statement8 : " + "Invalid input");
-        }
-
-            //Loops : while, do-while, for
-
-            //while loop : If you have to read infinite data use it
-            //This is called nested while loop
-            while(n<=4)
-            {
-                System.out.println("Loops : "+ "Hi " + n);  
-
-                int n1 = 1;
-                
-                while (n1<=3){
-                System.out.println("Loops : "+ "Hello " + n1);
-                n1++;
-                }
-                n++;
-            }
-
-            System.out.println("Loops : "+ "Bye " + n);   
-
-            //do-while loop : We want to execute the block even the condition is false to give a message
-
-            int n3 =5;
-
-            do
-            {
-
-            System.out.println("Loops1 : "+ "Hi " + n3); 
-            n3++;
-
-            }while(n3 <= 4);
-
-            //for loop: We can initialize, give condition and increment in one line 
-            //If you have finite number 100 -condition
-
-            //Increment
-            for(int n4 = 1; n4 <=4; n4++)
-            {
-                System.out.println("Loops2 : "+ "Hi " + n4); 
-            }
-
-            //Decrement 
-            for(int n4 = 4; n4 >= 1; n4--)
-            {
-                System.out.println("Loops2 : "+ "Hi " + n4); 
-            }
-
-            //Nested for loop : Pattern days
-
-            for(int n4 = 1; n4 <= 5; n4++)
-            {
-                System.out.println("DAYS : "+  n4); 
-
-                for(int n5 = 1; n5 <= 9; n5++ ){
-                    System.out.println("Hours : "+ (n5+8) +"-"+(n5+9)); 
-                }
-            }
+        System.out.println(result4);
     }
+
 }
+
+
